@@ -45,4 +45,20 @@ public class JavascriptUtil {
 		js.executeScript("history.go(0)");
 	}
 	
+	//Scroll down
+	
+	public static void scrollDown(WebDriver driver)
+	{
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("window.scrollTo(0,document.body.scrollHeight");
+	}
+	
+	//Scroll Up
+	
+		public static void scrollUp(WebDriver driver)
+		{
+			JavascriptExecutor js = (JavascriptExecutor) driver;
+			js.executeScript("window.scrollTo(0, -document.body.scrollHeight)");
+		}
+	
 }
