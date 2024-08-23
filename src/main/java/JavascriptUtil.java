@@ -19,7 +19,30 @@ public class JavascriptUtil {
 		String title = js.executeScript("return document.title;").toString();
 		return title;
 	}
+
+	//Click the WebElement
+	
+	public static void clickElement(WebDriver driver, WebElement element)
+	{
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("arguments[0].click();", element);
+		}
+	
+	//Generate Alert
+	
+	public static void generateAlert(WebDriver driver, String message)
+	{
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("alert('"+ message + "')");
+	}
 	
 	
+	//Refresh Browser
+	
+	public static void refreshBrowser(WebDriver driver)
+	{
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("history.go(0)");
+	}
 	
 }
