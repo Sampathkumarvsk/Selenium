@@ -19,7 +19,7 @@ public class JavaScriptExamples {
 		WebDriver driver = new ChromeDriver();
 
 		driver.get("https://www.google.co.in/");
-		driver.manage().window().maximize();
+		//driver.manage().window().maximize();
 	
 
 		// flash a particular Webelement
